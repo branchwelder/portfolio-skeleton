@@ -1,7 +1,8 @@
 # portfolio-skeleton
 
-This is a template repository containing the portfolio page skeleton for my Web
-Technologies course (HCDE 438).
+This is a template repository containing the portfolio page skeleton for my
+[Web Technologies](https://github.com/branchwelder/web-technologies) course
+(HCDE 438).
 
 The folder structure for this page should look like this:
 
@@ -14,7 +15,7 @@ The folder structure for this page should look like this:
   - `recipe.html` - html for the recipe page
   - `recipe.css` - styles for the recipe page
 
-### Viewing your site
+### Editing your site
 
 Assuming you have installed the VSCode Live Server extension, right click on
 `index.html` in the explorer side bar and click "Open with Live Server". The
