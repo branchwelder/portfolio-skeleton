@@ -1,0 +1,59 @@
+:root {
+  --nord0: #2e3440;
+  --nord1: #3b4252;
+  --nord2: #434c5e;
+  --nord3: #4c566a;
+  --nord4: #d8dee9;
+  --nord5: #e5e9f0;
+  --nord6: #eceff4;
+  --black: #2e3440;
+  --white: #eceff4;
+  --pink: #e892b2;
+  --red: #bf616a;
+  --orange: #d08770;
+  --yellow: #ebcb8b;
+  --green: #a3be8c;
+  --cyan: #88c0d0;
+  --blue: #5e81ac;
+  --purple: #b48ead;
+}
+
+body {
+  margin: 0; /* Body has a margin by default, so we get rid of it.  */
+  background-color: var(--nord0);
+  color: white;
+  font-family: "Orbitron", sans-serif;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+.page-container {
+  padding: 1rem;
+  max-width: 70rem;
+  margin: auto;
+}
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1rem;
+}
+
+.tile-grid > a {
+  background-color: var(--color);
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--nord0);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column-reverse;
+  transition: 50ms ease-in-out;
+}
+
+.tile-grid > a:hover {
+  box-shadow: 0 0 20px black;
+  transform: scale(1.03);
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+    <title>Flex Direction</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      background-color: #2f343f;
+      color: white;
+      font-family: "Orbitron", sans-serif;
+      padding: 1rem;
+    }
+
+    .container {
+      margin: auto;
+      max-width: 70rem;
+    }
+
+    .dir-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .dir-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .dir-row > div {
+      flex: 1 1 10rem;
+      height: 10rem;
+      background-color: #88c0d0;
+    }
+
+    .dir-column > div {
+      flex: 1 1 10rem;
+      width: 10rem;
+      background-color: #88c0d0;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Flex Direction</h1>
+      <h2>flex-direction: row</h2>
+      <div class="dir-row">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <h2>flex-direction: column</h2>
+      <div class="dir-column">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </body>
+</html>

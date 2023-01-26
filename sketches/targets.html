@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Targets</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script>
+      function setup() {
+        createCanvas(windowWidth, windowHeight);
+        noStroke();
+        noLoop();
+      }
+
+      function draw() {
+        background(51);
+        drawTarget(width * 0.25, height * 0.7, 200, 25);
+        drawTarget(width * 0.3, height * 0.3, 500, 6);
+        drawTarget(width * 0.4, height * 0.4, 400, 15);
+        drawTarget(width * 0.66, height * 0.5, 250, 13);
+        drawTarget(width * 0.5, height * 0.666, 300, 10);
+        drawTarget(width * 0.5, height * 0.3, 300, 10);
+        drawTarget(width * 0.75, height * 0.3, 120, 6);
+      }
+
+      function drawTarget(xloc, yloc, size, num) {
+        const grayvalues = 255 / num;
+        const steps = size / num;
+        for (let i = 0; i < num; i++) {
+          fill(i * grayvalues);
+          ellipse(xloc, yloc, size - i * steps, size - i * steps);
+        }
+      }
+
+      function windowResized() {
+        resizeCanvas(windowWidth, windowHeight);
+      }
+    </script>
+  </head>
+</html>

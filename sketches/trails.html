@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Trails</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script>
+      function setup() {
+        createCanvas(windowWidth, windowHeight);
+        background(0);
+      }
+
+      function draw() {
+        variableEllipse(mouseX, mouseY, pmouseX, pmouseY);
+      }
+
+      function variableEllipse(x, y, px, py) {
+        let speed = abs(x - px) + abs(y - py);
+        stroke(speed);
+        ellipse(x, y, speed, speed);
+      }
+
+      function windowResized() {
+        resizeCanvas(windowWidth, windowHeight);
+      }
+    </script>
+  </head>
+</html>

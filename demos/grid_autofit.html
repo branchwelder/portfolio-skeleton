@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+    <title>Grid Autofit</title>
+  </head>
+  <style>
+    body {
+      margin: 0; /* Body has a margin by default, so we get rid of it.  */
+      background-color: #2f343f;
+      color: white;
+      font-family: "Orbitron", sans-serif;
+    }
+
+    .page-container {
+      padding: 1rem;
+      max-width: 80rem; /* Setting a max width  */
+      margin: auto; /* Combined with the max width, auto margin will make this container always centered!  */
+    }
+
+    /* This is where the magic happens: grid-template-columns */
+    .tile-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      gap: 1rem; /* The gap between our tiles! */
+    }
+
+    /* EVERYTHING HERE DOWN IS JUST STYLE FOR THE DEMO! */
+
+    /* A bit of styling for the children */
+    .tile-grid > div {
+      border-radius: 10px;
+      transition: 50ms ease-in-out;
+      padding: 50%; /* A simple way of making a square */
+    }
+
+    /* Adding a little hover transition */
+    .tile-grid > div:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px 0px black;
+    }
+
+    /* These are just for coloring the tiles for demo purposes */
+    .tile-grid > *:nth-child(3n) {
+      background-color: #584952;
+      border: 1px solid #e892b2;
+    }
+
+    .tile-grid > *:nth-child(3n + 1) {
+      background-color: #3b494c;
+      border: 1px solid #88c0d0;
+    }
+
+    .tile-grid > *:nth-child(3n + 2) {
+      background-color: #5e594b;
+      border: 1px solid #ebcb8b;
+    }
+  </style>
+  <body>
+    <div class="page-container">
+      <h1>Grid Autofit Demo</h1>
+      <p>
+        The boxes auto-fit between a minimum and maximum size. Try resizing the
+        page!
+      </p>
+      <div class="tile-grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </body>
+</html>

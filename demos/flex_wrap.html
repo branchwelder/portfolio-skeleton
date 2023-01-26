@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+    <title>Flex Wrap</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      background-color: #2f343f;
+      color: white;
+      font-family: "Orbitron", sans-serif;
+      padding: 1rem;
+    }
+
+    .container {
+      margin: auto;
+      max-width: 70rem;
+    }
+
+    .nowrap {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .wrap {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .wrap-reverse {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap-reverse;
+      gap: 1rem;
+    }
+
+    .nowrap > div,
+    .wrap > div,
+    .wrap-reverse > div {
+      /* The next line is the shorthand for flex grow, shrink, and basis. */
+      /* flex: 1 1 10rem;  */
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 10rem;
+      height: 10rem;
+    }
+
+    /* This is just for centering the numbers in all the divs and styling them */
+    .nowrap > div,
+    .wrap > div,
+    .wrap-reverse > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 2rem;
+      background-color: #88c0d0;
+      color: #2f343f;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Flex Wrap</h1>
+      <h2>flex-wrap: nowrap</h2>
+      <div class="nowrap">
+        <div>0</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+      </div>
+      <h2>flex-wrap: wrap</h2>
+      <div class="wrap">
+        <div>0</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+      </div>
+      <h2>flex-wrap: wrap-reverse</h2>
+      <div class="wrap-reverse">
+        <div>0</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+      </div>
+    </div>
+  </body>
+</html>
