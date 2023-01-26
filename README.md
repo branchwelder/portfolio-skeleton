@@ -1,6 +1,8 @@
-# portfolio-skeleton
+# portfolio demos
 
-This is a template repository containing the portfolio page skeleton for my
+This repository contains demos for HCDE 438 Web Technologies portfolios.
+
+<!-- This is a template repository containing the portfolio page skeleton for my
 [Web Technologies](https://github.com/branchwelder/web-technologies) course
 (HCDE 438).
 
@@ -21,4 +23,4 @@ Assuming you have installed the VSCode Live Server extension, right click on
 `index.html` in the explorer side bar and click "Open with Live Server". The
 page should open automatically in your browser. You can now edit the files
 containing your site code and your changes will immediately update the browser -
-no need to restart the server.
+no need to restart the server. -->
