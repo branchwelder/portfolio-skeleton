@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+    <title>justify-content</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      background-color: #2f343f;
+      color: white;
+      font-family: "Orbitron", sans-serif;
+      padding: 1rem;
+    }
+
+    .container {
+      margin: auto;
+      max-width: 70rem;
+    }
+
+    .default {
+      display: flex;
+      gap: 1rem;
+      border: 1px solid #eceff4;
+    }
+
+    .center {
+      display: flex;
+      gap: 1rem;
+      border: 1px solid #eceff4;
+      justify-content: center;
+    }
+
+    .end {
+      display: flex;
+      gap: 1rem;
+      border: 1px solid #eceff4;
+      justify-content: flex-end;
+    }
+
+    .between {
+      display: flex;
+      gap: 1rem;
+      border: 1px solid #eceff4;
+      justify-content: space-between;
+    }
+    .around {
+      display: flex;
+      gap: 1rem;
+      border: 1px solid #eceff4;
+      justify-content: space-around;
+    }
+    .evenly {
+      display: flex;
+      gap: 1rem;
+      border: 1px solid #eceff4;
+      justify-content: space-evenly;
+    }
+
+    /* THIS IS ALL FOR STYLING THE CHILDREN */
+    .default > div,
+    .center > div,
+    .end > div,
+    .between > div,
+    .around > div,
+    .evenly > div {
+      background-color: #eceff4;
+      width: 8rem;
+      height: 8rem;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h2>justify-content: flex-start (default)</h2>
+      <div class="default">
+        <div class="tall"></div>
+        <div class="short"></div>
+        <div class="mid"></div>
+        <div class="tall"></div>
+        <div class="mid"></div>
+      </div>
+      <h2>justify-content: center</h2>
+      <div class="center">
+        <div class="tall"></div>
+        <div class="short"></div>
+        <div class="mid"></div>
+        <div class="tall"></div>
+        <div class="mid"></div>
+      </div>
+      <h2>justify-content: flex-end</h2>
+      <div class="end">
+        <div class="tall"></div>
+        <div class="short"></div>
+        <div class="mid"></div>
+        <div class="tall"></div>
+        <div class="mid"></div>
+      </div>
+      <h2>justify-content: space-between</h2>
+      <div class="between">
+        <div class="tall"></div>
+        <div class="short"></div>
+        <div class="mid"></div>
+        <div class="tall"></div>
+        <div class="mid"></div>
+      </div>
+      <h2>justify-content: space-around</h2>
+      <div class="around">
+        <div class="tall"></div>
+        <div class="short"></div>
+        <div class="mid"></div>
+        <div class="tall"></div>
+        <div class="mid"></div>
+      </div>
+      <h2>justify-content: space-evenly</h2>
+      <div class="evenly">
+        <div class="tall"></div>
+        <div class="short"></div>
+        <div class="mid"></div>
+        <div class="tall"></div>
+        <div class="mid"></div>
+      </div>
+    </div>
+  </body>
+</html>

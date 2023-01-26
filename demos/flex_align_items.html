@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+    <title>align-items</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      background-color: #2f343f;
+      color: white;
+      font-family: "Orbitron", sans-serif;
+      padding: 1rem;
+    }
+
+    .container {
+      margin: auto;
+      max-width: 70rem;
+    }
+
+    .default {
+      display: flex;
+      height: 20rem;
+      gap: 1rem;
+      border: 1px solid #eceff4;
+    }
+
+    .center {
+      display: flex;
+      height: 20rem;
+      gap: 1rem;
+      border: 1px solid #eceff4;
+      align-items: center;
+    }
+
+    .end {
+      display: flex;
+      height: 20rem;
+      gap: 1rem;
+      border: 1px solid #eceff4;
+      align-items: flex-end;
+    }
+
+    /* THIS IS ALL FOR STYLING THE CHILDREN */
+    .default > div,
+    .center > div,
+    .end > div {
+      flex: 1 1;
+      background-color: #eceff4;
+    }
+
+    .tall {
+      height: 15rem;
+    }
+
+    .mid {
+      height: 10rem;
+    }
+
+    .short {
+      height: 5rem;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h2>align-items: flex-start (default)</h2>
+      <div class="default">
+        <div class="tall"></div>
+        <div class="short"></div>
+        <div class="mid"></div>
+        <div class="tall"></div>
+        <div class="mid"></div>
+      </div>
+      <h2>align-items: center</h2>
+      <div class="center">
+        <div class="tall"></div>
+        <div class="short"></div>
+        <div class="mid"></div>
+        <div class="tall"></div>
+        <div class="mid"></div>
+      </div>
+      <h2>align-items: flex-end</h2>
+      <div class="end">
+        <div class="tall"></div>
+        <div class="short"></div>
+        <div class="mid"></div>
+        <div class="tall"></div>
+        <div class="mid"></div>
+      </div>
+    </div>
+  </body>
+</html>
