@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Colorful Lines</title>
+    <style>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script>
+      let t = 0;
+
+      function setup() {
+        createCanvas(windowWidth, windowHeight);
+        colorMode(HSB);
+      }
+
+      function draw() {
+        translate(width / 2, height / 2);
+        background("#2f343f");
+        stroke("white");
+
+        siz = min(width / 2, height / 2);
+        let lineGap = siz / 15;
+
+        push();
+        translate(-siz / 2, -siz / 2);
+        for (let coord = 0; coord < siz; coord += lineGap) {
+          let offset = (coord + t) % siz;
+
+          let hu = map(offset, 0, siz, 0, 360);
+          stroke(hu, 80, 80);
+          drawPoint(offset, 0, hu);
+          line(offset, 0, siz, offset);
+          drawPoint(siz, offset);
+          line(siz, offset, siz - offset, siz);
+          drawPoint(siz - offset, siz);
+          line(siz - offset, siz, 0, siz - offset);
+          drawPoint(0, siz - offset);
+          line(0, siz - offset, offset, 0);
+        }
+        pop();
+
+        t += 1;
+      }
+
+      function drawPoint(px, py, hu) {
+        fill(hu, 80, 80);
+        circle(px, py, 5);
+      }
+
+      function windowResized() {
+        resizeCanvas(windowWidth, windowHeight);
+      }
+    </script>
+  </head>
+</html>

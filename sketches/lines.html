@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Lines</title>
+    <style>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script>
+      let lineGap = 30;
+      let offset = 5;
+
+      function setup() {
+        createCanvas(windowWidth, windowHeight);
+      }
+
+      function draw() {
+        background("#2f343f");
+        stroke("white");
+
+        for (let offset = mouseX; offset < width; offset += lineGap) {
+          line(offset, 0, width, offset);
+          line(width, offset, width - offset, height);
+          line(width - offset, height, 0, height - offset);
+          line(0, height - offset, offset, 0);
+        }
+      }
+
+      function windowResized() {
+        resizeCanvas(windowWidth, windowHeight);
+      }
+    </script>
+  </head>
+</html>
